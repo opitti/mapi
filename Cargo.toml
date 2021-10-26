@@ -1,0 +1,26 @@
+[package]
+name = "rp"
+version = "0.1.0"
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[[bin]]
+name="rp1"
+path="src/rp1.rs"
+
+[[bin]]
+name="rp2"
+path="src/rp2.rs"
+
+[[bin]]
+name="main"
+path="src/main.rs"
+
+[dependencies]
+hyper = { version = "0.14", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+pretty_env_logger = "0.4"
+futures-util = { version = "0.3", default-features = false, features = ["alloc"] }
+
+derive-macro = { path = "derive-macro" }
+

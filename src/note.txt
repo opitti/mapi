@@ -1,0 +1,13 @@
+req.method(), req.uri().path()
+
+Ok(Response::new(Body::from(
+            "Try POSTing data to /echo such as: `curl localhost:3000/echo -XPOST -d 'hello world'`",
+        )))
+
+        &Method::GET, "/"
+
+match () {
+        // Serve some instructions at /
+        (&Method::GET, "/") => Ok(Response::new(Body::from(
+            "Try POSTing data to /echo such as: `curl localhost:3000/echo -XPOST -d 'hello world'`",
+        ))),
